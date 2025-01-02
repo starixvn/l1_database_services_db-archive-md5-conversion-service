@@ -30,8 +30,8 @@ export const lumiLoggerConfig = {
 };
 
 const mongoCred = "lmn_summary:%4c%6d%6e%53%75%6d%6d%61%72%79%40%32%32%30%32%37";
-const mongoSrv = "10.99.99.53:39120,10.99.99.54:39120,10.99.99.188:39120,10.99.99.187:39120";
-const mongoRepl = "SabaUAT";
+const mongoSrv = "10.99.99.53:39125,10.99.99.54:39125,10.99.99.188:39125,10.99.99.187:39125";
+const mongoRepl = "SabaUATArc";
 
 export const database = {
     mongoURI: `mongodb://${mongoCred}@${mongoSrv}/admin?authSource=admin&appName=${encodeURIComponent(name)}&replicaSet=${mongoRepl}`,
