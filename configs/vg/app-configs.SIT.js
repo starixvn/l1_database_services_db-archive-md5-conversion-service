@@ -2,13 +2,13 @@
 
 import { name, version } from "./metadata.js";
 
-export const environment = "VG-SIT";
+export const environment = "VG-MIS-SIT";
 export const healthcheckPort = 5000;
 
 /** @type {LumiLoggerConfig} */
 export const lumiLoggerConfig = {
     sentryNodeOptions: {
-        dsn: "http://4d147849b1a44d53844166ff9487dd6b@10.2.190.51:9009/296",
+        dsn: "http://6dedea44b8f8e60b6519ff864484357a@sentrysc.ops-sit.nebula.sit/20",
         environment,
         initialScope: {
             tags: { service: name },
@@ -18,19 +18,14 @@ export const lumiLoggerConfig = {
     skynexOptions: {
         conversationIds: {
             telegram: -1001604444158,
-            teams: "19:8d4e742134134c3893e78891257d6c3c@thread.tacv2",
-        },
-        proxy: {
-            protocol: "http",
-            host: "lisasqd.nebula.prod",
-            port: 8801,
+            slack: "B08GPPK88MS:T08ACMHMMFS:C090ALHP2DD",
         },
     },
     environment,
 };
 
 const mongoCred = "lmn_summary:%4c%6d%6e%53%75%6d%6d%61%72%79%40%35%31%37";
-const mongoSrv = "10.99.99.53:39235,10.99.99.54:39235,10.99.99.188:39235,10.99.99.187:39235";
+const mongoSrv = "172.16.4.111:32351";
 const mongoRepl = "SabaL2SITArc";
 
 export const database = {
